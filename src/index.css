@@ -1,0 +1,17 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&display=swap');
+
+@theme {
+  --font-sans: "Quicksand", ui-sans-serif, system-ui, sans-serif;
+  
+  --color-soft-blue: #E0F2FE;
+  --color-sage-green: #DCFCE7;
+  --color-warm-sand: #FEF3C7;
+  --color-gold: #FBBF24;
+  --color-deep-blue: #135da0;
+  --color-deep-gold: #835000;
+}
+
+body {
+  @apply font-sans bg-slate-50 text-slate-900;
+}
