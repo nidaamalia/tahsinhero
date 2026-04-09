@@ -1,6 +1,7 @@
 import { motion } from 'motion/react';
 import { Link } from 'react-router-dom';
-import { Wind, Waves, Cat, Zap, Shirt, Sparkles } from 'lucide-react';
+import { Wind, Waves, Cat, Zap, Shirt, Sparkles, ChevronRight } from 'lucide-react';
+import { AnimatedText } from '../components/AnimatedText';
 
 export default function SifatListPage() {
   const modules = [
@@ -83,7 +84,8 @@ export default function SifatListPage() {
               to={mod.to}
               className="w-full py-3 bg-deep-blue text-white rounded-full font-bold flex items-center justify-center gap-2 shadow-[0_4px_0_0_#0d4170] active:translate-y-1 active:shadow-none transition-all"
             >
-              MAIN
+              <AnimatedText text='Selesaikan Misi' />
+              <ChevronRight size={18} />
             </Link>
           </motion.div>
         ))}

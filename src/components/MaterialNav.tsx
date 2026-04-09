@@ -19,14 +19,14 @@ export const COURSE_SEQUENCE = [
 export default function MaterialNav() {
   const location = useLocation();
   const { t } = useLanguage();
-  
+
   const currentIndex = COURSE_SEQUENCE.findIndex(item => item.path === location.pathname);
-  
+
   if (currentIndex === -1) return null;
 
   const isFirstMakhraj = currentIndex === 0;
   const isLastMakhraj = currentIndex === 4; // Gua Dengung
-  
+
   const isFirstSifat = currentIndex === 5; // Kipas Angin Hero
   const isLastSifat = currentIndex === COURSE_SEQUENCE.length - 1;
 
@@ -56,14 +56,14 @@ export default function MaterialNav() {
         className="flex-1 py-3 px-4 bg-white border-2 border-slate-200 text-slate-600 rounded-2xl font-bold flex items-center justify-center gap-2 hover:bg-slate-50 active:scale-95 transition-all text-sm shadow-sm"
       >
         <ArrowLeft size={16} />
-        <span className="truncate">{t.prev}</span>
+        <span className="truncate">Sebelumnya</span>
       </Link>
-      
+
       <Link
         to={nextPath}
         className="flex-1 py-3 px-4 bg-deep-blue text-white rounded-2xl font-bold flex items-center justify-center gap-2 shadow-[0_4px_0_0_#0d4170] active:translate-y-1 active:shadow-none transition-all text-sm"
       >
-        <span className="truncate">{t.next}</span>
+        <span className="truncate">Selanjutnya</span>
         <ArrowRight size={16} />
       </Link>
     </div>
