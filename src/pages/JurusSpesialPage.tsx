@@ -44,12 +44,12 @@ export default function JurusSpesialPage() {
               </motion.button>
             ))}
           </div>
-          <button 
+          {/* <button 
             onClick={() => handlePlayAudio('qalqalah')}
             className="w-full py-3 bg-deep-blue text-white rounded-full font-bold flex items-center justify-center gap-2 shadow-[0_4px_0_0_#0d4170] active:translate-y-1 active:shadow-none transition-all"
           >
             <Play size={18} fill="currentColor" /> Mainkan
-          </button>
+          </button> */}
         </div>
 
         {/* Siulan */}
@@ -70,12 +70,12 @@ export default function JurusSpesialPage() {
               </div>
             ))}
           </div>
-          <button 
+          {/* <button 
             onClick={() => handlePlayAudio('safir')}
             className="w-full py-3 bg-green-600 text-white rounded-full font-bold flex items-center justify-center gap-2 shadow-[0_4px_0_0_#15803d] active:translate-y-1 active:shadow-none transition-all"
           >
             <Play size={18} fill="currentColor" /> Mainkan
-          </button>
+          </button> */}
         </div>
 
         {/* Getaran */}
@@ -97,12 +97,12 @@ export default function JurusSpesialPage() {
               ر
             </motion.div>
           </div>
-          <button 
+          {/* <button 
             onClick={() => handlePlayAudio('takrir')}
             className="w-full py-3 bg-deep-gold text-white rounded-full font-bold flex items-center justify-center gap-2 shadow-[0_4px_0_0_#673e00] active:translate-y-1 active:shadow-none transition-all"
           >
             <Play size={18} fill="currentColor" /> Mainkan
-          </button>
+          </button> */}
         </div>
       </div>
 

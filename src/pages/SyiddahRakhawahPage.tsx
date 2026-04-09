@@ -43,13 +43,13 @@ export default function SyiddahRakhawahPage() {
             </p>
           </div>
 
-          <button 
+          {/* <button 
             onClick={() => handlePlayAudio('syiddah')}
             className="w-full py-4 bg-red-500 text-white rounded-full font-bold flex items-center justify-center gap-2 shadow-[0_4px_0_0_#b91c1c] active:translate-y-1 active:shadow-none transition-all"
           >
             <Play size={20} fill="currentColor" />
             Dengarkan Suara Rem
-          </button>
+          </button> */}
         </motion.div>
 
         {/* Kran Air (Rakhawah) */}
@@ -73,13 +73,13 @@ export default function SyiddahRakhawahPage() {
             </p>
           </div>
 
-          <button 
+          {/* <button 
             onClick={() => handlePlayAudio('rakhawah')}
             className="w-full py-4 bg-deep-blue text-white rounded-full font-bold flex items-center justify-center gap-2 shadow-[0_4px_0_0_#0d4170] active:translate-y-1 active:shadow-none transition-all"
           >
             <Play size={20} fill="currentColor" />
             Dengarkan Suara Mengalir
-          </button>
+          </button> */}
         </motion.div>
       </div>
 

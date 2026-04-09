@@ -43,13 +43,13 @@ export default function TafkhimTarqiqPage() {
             </p>
           </div>
 
-          <button 
+          {/* <button 
             onClick={() => handlePlayAudio('tafkhim')}
             className="w-full py-4 bg-deep-gold text-white rounded-full font-bold flex items-center justify-center gap-2 shadow-[0_4px_0_0_#673e00] active:translate-y-1 active:shadow-none transition-all"
           >
             <Play size={20} fill="currentColor" />
             Suara Gagah
-          </button>
+          </button> */}
         </motion.div>
 
         {/* Semut Senyum (Tarqiq) */}
@@ -73,13 +73,13 @@ export default function TafkhimTarqiqPage() {
             </p>
           </div>
 
-          <button 
+          {/* <button 
             onClick={() => handlePlayAudio('tarqiq')}
             className="w-full py-4 bg-deep-blue text-white rounded-full font-bold flex items-center justify-center gap-2 shadow-[0_4px_0_0_#0d4170] active:translate-y-1 active:shadow-none transition-all"
           >
             <Play size={20} fill="currentColor" />
             Suara Senyum
-          </button>
+          </button> */}
         </motion.div>
       </div>
 

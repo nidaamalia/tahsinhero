@@ -20,7 +20,7 @@ export default function TentangPage() {
         <div>
           <h1 className="text-2xl font-black text-deep-blue tracking-tight">Tentang Mamak Coding</h1>
           <p className="text-slate-500 font-medium mt-3 text-sm leading-relaxed bg-white p-4 rounded-2xl shadow-sm border border-slate-100">
-            Halo Bunda! Saya <span className="font-bold text-deep-blue">@mamakcoding</span>. Tahsin Hero dibuat dengan cinta untuk membantu Ananda belajar makhraj dan sifat huruf dengan cara yang menyenangkan, tanpa tekanan, dan penuh imajinasi.
+            Halo Bunda! Saya <a href="https://www.threads.com/@mamakcoding" target="_blank" rel="noopener noreferrer" className="font-bold text-deep-blue hover:underline">@mamakcoding</a>. Tahsin Hero dibuat dengan cinta untuk membantu Ananda belajar makhraj dan sifat huruf dengan cara yang menyenangkan, tanpa tekanan, dan penuh imajinasi.
           </p>
         </div>
       </section>

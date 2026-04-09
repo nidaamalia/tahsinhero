@@ -118,13 +118,13 @@ export default function AlLisanPage() {
               <h3 className="text-2xl font-bold text-slate-800">{content[activeTab].title}</h3>
             </div>
 
-            <button 
+            {/* <button 
               onClick={() => handlePlayAudio(content[activeTab].letters)}
               className="w-full md:w-auto px-8 py-4 bg-deep-blue text-white rounded-full font-bold flex items-center justify-center gap-2 shadow-[0_4px_0_0_#0d4170] active:translate-y-1 active:shadow-none transition-all"
             >
               <Play size={20} fill="currentColor" />
               Dengarkan Suara
-            </button>
+            </button> */}
 
             <div className="w-full bg-slate-50 rounded-2xl p-5 border-l-4 border-deep-blue text-left flex gap-4 items-start">
               <MessageCircle className="text-deep-blue shrink-0 mt-1" size={24} />

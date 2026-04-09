@@ -51,7 +51,7 @@ export const translations = {
       l1Parent: 'Ayo Kak, buka mulutnya seperti sedang kaget lihat balon besar!',
       l2Name: 'Huruf Wau',
       l2Tip: 'MONYONG BULAT',
-      l2Parent: 'Bentuk bibirnya jadi bulat kecil ya, kayak mau tiup lilin ultah.',
+      l2Parent: 'Bentuk bibirnya jadi bulat kecil ya, kayak mau tiup lilin.',
       l3Name: 'Huruf Ya',
       l3Tip: 'SENYUM LEBAR',
       l3Parent: 'Tarik sudut bibirnya ke samping, seperti lagi senyum paling cantik!',

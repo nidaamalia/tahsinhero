@@ -1,5 +1,5 @@
 import { motion } from 'motion/react';
-import { Play, Wind, Mountain, Lightbulb } from 'lucide-react';
+import { Play, Wind, Mountain, Pencil } from 'lucide-react';
 import MateriHeader from '../components/MateriHeader';
 import MaterialNav from '../components/MaterialNav';
 
@@ -46,10 +46,10 @@ export default function HamsJahrPage() {
                 </div>
               ))}
             </div>
-            <button className="w-full py-4 bg-deep-blue text-white rounded-full font-bold flex items-center justify-center gap-2 shadow-[0_4px_0_0_#0d4170] active:translate-y-1 active:shadow-none transition-all">
+            {/* <button className="w-full py-4 bg-deep-blue text-white rounded-full font-bold flex items-center justify-center gap-2 shadow-[0_4px_0_0_#0d4170] active:translate-y-1 active:shadow-none transition-all">
               <Play size={20} fill="currentColor" />
               Play Audio
-            </button>
+            </button> */}
             <div className="bg-slate-50 rounded-2xl p-4 border-l-4 border-deep-blue">
               <p className="text-[10px] font-black text-deep-blue uppercase tracking-widest mb-1">Bisikan Ortu</p>
               <p className="text-sm text-slate-600 italic">"Taruh tangan di depan mulut, rasakan tiupan anginnya ya Bun!"</p>
@@ -71,10 +71,10 @@ export default function HamsJahrPage() {
                 </div>
               ))}
             </div>
-            <button className="w-full py-4 bg-deep-gold text-white rounded-full font-bold flex items-center justify-center gap-2 shadow-[0_4px_0_0_#673e00] active:translate-y-1 active:shadow-none transition-all">
+            {/* <button className="w-full py-4 bg-deep-gold text-white rounded-full font-bold flex items-center justify-center gap-2 shadow-[0_4px_0_0_#673e00] active:translate-y-1 active:shadow-none transition-all">
               <Play size={20} fill="currentColor" />
               Play Audio
-            </button>
+            </button> */}
             <div className="bg-slate-50 rounded-2xl p-4 border-l-4 border-deep-gold">
               <p className="text-[10px] font-black text-deep-gold uppercase tracking-widest mb-1">Bisikan Ortu</p>
               <p className="text-sm text-slate-600 italic">"Pastikan tidak ada angin yang terasa di tangan saat mengucapkannya."</p>
@@ -83,14 +83,14 @@ export default function HamsJahrPage() {
         </div>
       </div>
 
-      <div className="bg-tertiary/5 border-2 border-dashed border-tertiary/20 rounded-3xl p-6 flex gap-4 items-start">
-        <div className="bg-tertiary text-white p-2 rounded-xl shrink-0">
-          <Lightbulb size={20} />
+      <div className="bg-deep-blue/5 border-2 border-dashed border-deep-blue/20 rounded-3xl p-6 flex gap-4 items-start">
+        <div className="bg-deep-blue text-white p-2 rounded-xl shrink-0">
+          <Pencil size={20} />
         </div>
         <div className="space-y-1">
-          <h4 className="font-bold text-tertiary">Catatan Ahli</h4>
+          <h4 className="font-bold text-deep-blue">Catatan Ahli</h4>
           <p className="text-sm text-slate-600 leading-relaxed">
-            Bunda, fokus pada huruf Kaf (ك) dan Ta (ت) ya. Mereka sering malu-malu mengeluarkan anginnya kalau dibaca pelan. <span className="text-tertiary font-bold">Ayo semangati Ananda!</span>
+            Bunda, fokus pada huruf Kaf (ك) dan Ta (ت) ya. Mereka sering malu-malu mengeluarkan anginnya kalau dibaca pelan. <span className="text-deep-blue font-bold">Ayo semangati Ananda!</span>
           </p>
         </div>
       </div>

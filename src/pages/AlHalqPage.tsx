@@ -96,13 +96,13 @@ export default function AlHalqPage() {
               <p className="font-bold text-slate-700">{floor.desc}</p>
             </div>
 
-            <button 
+            {/* <button 
               onClick={() => handlePlayAudio(floor.title)}
               className={`w-full py-3 mt-2 ${floor.textColor.replace('text-', 'bg-').replace('700', '600')} text-white rounded-full font-bold flex items-center justify-center gap-2 ${floor.shadow} active:translate-y-1 active:shadow-none transition-all`}
             >
               <Play size={18} fill="currentColor" />
               Mainkan
-            </button>
+            </button> */}
 
             <div className={`mt-4 ${floor.color} bg-opacity-30 rounded-2xl p-4 border-l-4 ${floor.borderColor}`}>
               <div className="flex items-center gap-2 mb-1">

@@ -62,13 +62,13 @@ export default function AlKhaisyumPage() {
       </div>
 
       <div className="bg-white rounded-3xl p-6 shadow-sm border-b-4 border-slate-100 space-y-6">
-        <button 
+        {/* <button 
           onClick={handlePlayAudio}
           className="w-full py-4 bg-deep-blue text-white rounded-full font-bold flex items-center justify-center gap-2 shadow-[0_4px_0_0_#0d4170] active:translate-y-1 active:shadow-none transition-all"
         >
           <Play size={20} fill="currentColor" />
           Dengarkan Dengungan
-        </button>
+        </button> */}
 
         <div className="bg-warm-sand/50 rounded-2xl p-5 border-l-4 border-deep-gold">
           <div className="flex items-center gap-2 mb-2">

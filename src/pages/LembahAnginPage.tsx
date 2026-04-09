@@ -1,24 +1,24 @@
 import { motion } from 'motion/react';
-import { Play, Lightbulb } from 'lucide-react';
+import { Play, Pencil } from 'lucide-react';
 import MateriHeader from '../components/MateriHeader';
 import MaterialNav from '../components/MaterialNav';
 
 export default function LembahAnginPage() {
   const letters = [
     { char: 'ا', name: 'Huruf Alif', tip: 'BUKA MULUT LEBAR', parentTip: 'Ayo Kak, buka mulutnya seperti sedang kaget lihat balon besar!' },
-    { char: 'و', name: 'Huruf Wau', tip: 'MONYONG BULAT', parentTip: 'Bentuk bibirnya jadi bulat kecil ya, kayak mau tiup lilin ultah.' },
+    { char: 'و', name: 'Huruf Wau', tip: 'MONYONG BULAT', parentTip: 'Bentuk bibirnya jadi bulat kecil ya, kayak mau tiup lilin.' },
     { char: 'ي', name: 'Huruf Ya', tip: 'SENYUM LEBAR', parentTip: 'Tarik sudut bibirnya ke samping, seperti lagi senyum paling cantik!' },
   ];
 
   return (
-    <motion.div 
+    <motion.div
       initial={{ x: 50, opacity: 0 }}
       animate={{ x: 0, opacity: 1 }}
       transition={{ type: 'spring', stiffness: 300, damping: 30 }}
       className="pb-24 pt-6 px-6 max-w-md mx-auto space-y-8"
     >
       <MateriHeader title="Lembah Angin" breadcrumb="Lembah Angin" />
-      
+
       <header className="text-center space-y-4">
         <div className="relative aspect-video bg-soft-blue rounded-3xl overflow-hidden shadow-inner flex flex-col items-center justify-center border-4 border-white">
           {/* Balloon SVG */}
@@ -28,7 +28,7 @@ export default function LembahAnginPage() {
             <path d="M80 10C41.3401 10 10 41.3401 10 80C10 118.66 41.3401 150 80 150C118.66 150 150 118.66 150 80C150 41.3401 118.66 10 80 10Z" fill="#3b82f6" opacity="0.4"/>
             <path d="M80 20C46.8629 20 20 46.8629 20 80C20 113.137 46.8629 140 80 140C113.137 140 140 113.137 140 80C140 46.8629 113.137 20 80 20Z" fill="#2563eb" opacity="0.6"/>
           </svg>
-          
+
           {/* Ropes */}
           <div className="absolute top-[120px] flex justify-between w-24">
             <div className="w-1 h-12 bg-deep-blue/50 rotate-12"></div>
@@ -60,11 +60,11 @@ export default function LembahAnginPage() {
                   <p className="text-deep-gold font-black text-xs tracking-wider">{item.tip}</p>
                 </div>
               </div>
-              <button className="w-12 h-12 bg-deep-blue text-white rounded-full flex items-center justify-center shadow-lg active:scale-90 transition-transform">
+              {/* <button className="w-12 h-12 bg-deep-blue text-white rounded-full flex items-center justify-center shadow-lg active:scale-90 transition-transform">
                 <Play size={20} fill="currentColor" />
-              </button>
+              </button> */}
             </div>
-            
+
             <div className="bg-soft-blue/30 rounded-2xl p-4 border-l-4 border-deep-blue">
               <p className="text-[10px] font-black text-deep-blue uppercase tracking-widest mb-1">Bisikan Ortu</p>
               <p className="text-sm text-slate-600 italic leading-relaxed">"{item.parentTip}"</p>
@@ -73,12 +73,12 @@ export default function LembahAnginPage() {
         ))}
       </div>
 
-      <div className="bg-tertiary/5 border-2 border-dashed border-tertiary/20 rounded-3xl p-6 flex gap-4 items-start">
-        <div className="bg-tertiary text-white p-2 rounded-xl shrink-0">
-          <Lightbulb size={20} />
+      <div className="bg-deep-blue/5 border-2 border-dashed border-deep-blue/20 rounded-3xl p-6 flex gap-4 items-start">
+        <div className="bg-deep-blue text-white p-2 rounded-xl shrink-0">
+          <Pencil size={20} />
         </div>
         <div className="space-y-1">
-          <h4 className="font-bold text-tertiary">Catatan Ahli</h4>
+          <h4 className="font-bold text-deep-blue">Catatan Ahli</h4>
           <p className="text-sm text-slate-600 leading-relaxed">
             Bunda, pastikan suara Mad ini murni keluar dari mulut ya. Kalau hidung dipencet dan suaranya berubah, berarti masih ada suara yang nyasar ke hidung!
           </p>

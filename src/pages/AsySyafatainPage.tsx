@@ -82,13 +82,13 @@ export default function AsySyafatainPage() {
             </div>
 
             <div className="mt-6 space-y-4">
-              <button 
+              {/* <button 
                 onClick={() => handlePlayAudio(card.action)}
                 className={`w-full py-3 ${card.textColor.replace('text-', 'bg-').replace('700', '600')} text-white rounded-full font-bold flex items-center justify-center gap-2 ${card.shadow} active:translate-y-1 active:shadow-none transition-all`}
               >
                 <Play size={18} fill="currentColor" />
                 Dengarkan
-              </button>
+              </button> */}
 
               <div className="bg-slate-50 rounded-2xl p-4 border-l-4 border-slate-300">
                 <p className="text-[10px] font-black text-slate-500 uppercase tracking-widest mb-1">Bisikan Ortu</p>

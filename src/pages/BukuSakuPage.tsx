@@ -46,7 +46,7 @@ export default function BukuSakuPage() {
 
       <section className="bg-white rounded-3xl p-8 shadow-sm border-2 border-soft-blue/30 space-y-6">
         <div className="flex items-center gap-3">
-          <div className="w-10 h-10 rounded-full bg-tertiary/10 flex items-center justify-center text-tertiary">
+          <div className="w-10 h-10 rounded-full bg-deep-gold/10 flex items-center justify-center text-deep-gold">
             <Sparkles size={20} />
           </div>
           <h3 className="text-xl font-black text-slate-800">Tips "Anti-Gagal"</h3>
@@ -56,7 +56,7 @@ export default function BukuSakuPage() {
           <div className="flex gap-4">
             <CheckCircle2 className="text-deep-blue shrink-0 mt-1" size={20} />
             <p className="text-slate-600 font-medium leading-relaxed italic">
-              "Jangan bilang <span className="text-tertiary font-bold">Salah</span>, katakan <span className="text-deep-blue font-bold">'Hampir benar, yuk coba geser lidahnya sedikit!'</span>"
+              "Jangan bilang <span className="text-deep-gold font-bold">Salah</span>, katakan <span className="text-deep-blue font-bold">'Hampir benar, yuk coba geser lidahnya sedikit!'</span>"
             </p>
           </div>
           <div className="flex gap-4">
@@ -83,7 +83,7 @@ export default function BukuSakuPage() {
           </div>
           <div>
             <p className="text-sm font-bold text-slate-800 leading-tight">Ingin tips parenting & aplikasi lainnya?</p>
-            <p className="text-xs text-deep-gold font-bold mt-1">Kenalan dengan @mamakcoding di sini &rarr;</p>
+            <p className="text-xs text-deep-gold font-bold mt-1">Kenalan dengan <a href="https://www.threads.com/@mamakcoding" target="_blank" rel="noopener noreferrer" className="underline hover:opacity-80" onClick={(e) => e.stopPropagation()}>@mamakcoding</a> di sini &rarr;</p>
           </div>
         </motion.div>
       </Link>
