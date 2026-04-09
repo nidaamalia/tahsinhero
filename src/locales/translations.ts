@@ -6,7 +6,7 @@ export const translations = {
       map: 'Peta Utama',
       makhraj: 'Rumah Suara',
       sifat: 'Gaya Huruf',
-      buku: 'Buku Saku',
+      buku: 'Panduan',
     },
     common: {
       play: 'Mainkan',

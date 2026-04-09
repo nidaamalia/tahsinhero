@@ -1,22 +1,7 @@
 import React, { createContext, useContext, useState } from 'react';
+import { translations, Language } from '../locales/translations';
 
-type Language = 'id' | 'en';
-
-interface Translations {
-  prev: string;
-  next: string;
-}
-
-const translations: Record<Language, Translations> = {
-  id: {
-    prev: 'Sebelumnya',
-    next: 'Selanjutnya',
-  },
-  en: {
-    prev: 'Previous',
-    next: 'Next',
-  },
-};
+type Translations = typeof translations.id;
 
 interface LanguageContextType {
   lang: Language;

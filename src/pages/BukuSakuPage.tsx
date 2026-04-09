@@ -12,7 +12,7 @@ export default function BukuSakuPage() {
   return (
     <div className="pb-24 pt-6 px-6 max-w-md mx-auto space-y-8">
       <header className="text-center space-y-2">
-        <h1 className="text-3xl font-black text-deep-blue tracking-tight">Buku Saku Hero</h1>
+        <h1 className="text-3xl font-black text-deep-blue tracking-tight">Panduan Orang Tua</h1>
         <p className="text-deep-gold font-bold">Tips Rahasia Ayah & Bunda membimbing Ananda.</p>
         <div className="pt-4 flex justify-center">
           <div className="h-1.5 w-24 bg-soft-blue rounded-full opacity-50"></div>
@@ -24,7 +24,7 @@ export default function BukuSakuPage() {
           <BookOpen className="text-deep-gold" size={24} />
           <h3 className="text-xl font-black text-slate-800">3 Langkah Emas</h3>
         </div>
-        
+
         <div className="grid gap-4">
           {steps.map((step, idx) => (
             <motion.div
@@ -69,10 +69,10 @@ export default function BukuSakuPage() {
           </div>
         </div>
 
-        <button className="w-full py-4 bg-deep-blue text-white font-bold text-lg rounded-full shadow-[0_4px_0_0_#0d4170] active:translate-y-1 active:shadow-none transition-all flex items-center justify-center gap-2">
+        <Link to="/" className="w-full py-4 bg-deep-blue text-white font-bold text-lg rounded-full shadow-[0_4px_0_0_#0d4170] active:translate-y-1 active:shadow-none transition-all flex items-center justify-center gap-2">
           <BookOpen size={20} />
           Mulai Belajar Bersama
-        </button>
+        </Link>
       </section>
 
       {/* Link to TentangPage */}
