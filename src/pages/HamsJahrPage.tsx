@@ -5,7 +5,7 @@ import MaterialNav from '../components/MaterialNav';
 
 export default function HamsJahrPage() {
   return (
-    <motion.div 
+    <motion.div
       initial={{ x: 50, opacity: 0 }}
       animate={{ x: 0, opacity: 1 }}
       transition={{ type: 'spring', stiffness: 300, damping: 30 }}
@@ -51,7 +51,7 @@ export default function HamsJahrPage() {
               Play Audio
             </button> */}
             <div className="bg-slate-50 rounded-2xl p-4 border-l-4 border-deep-blue">
-              <p className="text-[10px] font-black text-deep-blue uppercase tracking-widest mb-1">Bisikan Ortu</p>
+              <p className="text-[10px] font-black text-deep-blue uppercase tracking-widest mb-1">Tips Mengajari</p>
               <p className="text-sm text-slate-600 italic">"Taruh tangan di depan mulut, rasakan tiupan anginnya ya Bun!"</p>
             </div>
           </div>
@@ -65,7 +65,7 @@ export default function HamsJahrPage() {
           </div>
           <div className="p-6 space-y-6">
             <div className="grid grid-cols-6 gap-2 text-center">
-              {['ء', 'ب', 'ج', 'د', 'ط', 'ق'].map((l, i) => (
+              {['ء', 'ب', 'ج', 'د', 'ذ', 'ر', 'ز', 'ض', 'ط', 'ظ', 'ع', 'غ', 'ق', 'ل', 'م', 'ن', 'و', 'ي'].map((l, i) => (
                 <div key={i} className="aspect-square bg-warm-sand/20 rounded-xl flex items-center justify-center text-2xl font-black text-deep-gold">
                   {l}
                 </div>
@@ -76,7 +76,7 @@ export default function HamsJahrPage() {
               Play Audio
             </button> */}
             <div className="bg-slate-50 rounded-2xl p-4 border-l-4 border-deep-gold">
-              <p className="text-[10px] font-black text-deep-gold uppercase tracking-widest mb-1">Bisikan Ortu</p>
+              <p className="text-[10px] font-black text-deep-gold uppercase tracking-widest mb-1">Tips Mengajari</p>
               <p className="text-sm text-slate-600 italic">"Pastikan tidak ada angin yang terasa di tangan saat mengucapkannya."</p>
             </div>
           </div>

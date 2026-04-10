@@ -17,9 +17,9 @@ export default function SifatListPage() {
     },
     {
       id: 2,
-      name: 'Rem & Air',
-      desc: 'Belajar cara menghentikan (Klik!) dan mengalirkan suara merdu.',
-      sub: 'Syiddah & Rakhawah',
+      name: 'Rem, Jalan & Air',
+      desc: 'Belajar cara menghentikan, melambatkan, dan mengalirkan suara merdu.',
+      sub: 'Syiddah, Tawasuth & Rakhawah',
       icon: Waves,
       color: 'bg-warm-sand',
       textColor: 'text-deep-gold',

@@ -9,7 +9,7 @@ export default function AlKhaisyumPage() {
   };
 
   return (
-    <motion.div 
+    <motion.div
       initial={{ x: 50, opacity: 0 }}
       animate={{ x: 0, opacity: 1 }}
       transition={{ type: 'spring', stiffness: 300, damping: 30 }}
@@ -23,12 +23,12 @@ export default function AlKhaisyumPage() {
       </header>
 
       <div className="relative bg-soft-blue rounded-3xl p-8 overflow-hidden shadow-inner flex flex-col items-center justify-center min-h-[300px] border-4 border-white">
-        <motion.div 
-          animate={{ 
+        <motion.div
+          animate={{
             y: [0, -10, 0],
             rotate: [-5, 5, -5]
           }}
-          transition={{ 
+          transition={{
             duration: 4,
             repeat: Infinity,
             ease: "easeInOut"
@@ -37,13 +37,13 @@ export default function AlKhaisyumPage() {
         >
           <Bug size={48} />
         </motion.div>
-        
-        <motion.div 
-          animate={{ 
+
+        <motion.div
+          animate={{
             y: [0, 15, 0],
             rotate: [5, -5, 5]
           }}
-          transition={{ 
+          transition={{
             duration: 5,
             repeat: Infinity,
             ease: "easeInOut"
@@ -62,7 +62,7 @@ export default function AlKhaisyumPage() {
       </div>
 
       <div className="bg-white rounded-3xl p-6 shadow-sm border-b-4 border-slate-100 space-y-6">
-        {/* <button 
+        {/* <button
           onClick={handlePlayAudio}
           className="w-full py-4 bg-deep-blue text-white rounded-full font-bold flex items-center justify-center gap-2 shadow-[0_4px_0_0_#0d4170] active:translate-y-1 active:shadow-none transition-all"
         >
@@ -73,7 +73,7 @@ export default function AlKhaisyumPage() {
         <div className="bg-warm-sand/50 rounded-2xl p-5 border-l-4 border-deep-gold">
           <div className="flex items-center gap-2 mb-2">
             <Bug size={20} className="text-deep-gold" />
-            <p className="text-xs font-black text-deep-gold uppercase tracking-widest">Bisikan Ortu</p>
+            <p className="text-xs font-black text-deep-gold uppercase tracking-widest">Tips Mengajari</p>
           </div>
           <p className="text-slate-700 italic leading-relaxed font-medium">
             "Pencet hidung Ananda saat bersuara, harus terasa getarannya!"

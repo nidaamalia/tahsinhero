@@ -2,8 +2,11 @@ import { motion } from 'motion/react';
 import { Play, TowerControl, Info } from 'lucide-react';
 import MateriHeader from '../components/MateriHeader';
 import MaterialNav from '../components/MaterialNav';
+import { useLanguage } from '../contexts/LanguageContext';
+import { AnimatedText } from '../components/AnimatedText';
 
 export default function AlHalqPage() {
+  const { t } = useLanguage();
   const handlePlayAudio = (title: string) => {
     console.log(`Playing audio for: ${title}`);
     // TODO: Implement actual audio playback
@@ -13,30 +16,30 @@ export default function AlHalqPage() {
 
   const floors = [
     {
-      title: 'Lantai Atas',
+      title: t.alHalq.f1Title,
       letters: 'غ خ',
-      desc: 'Suara Kumur-Kumur',
-      tip: 'Ajak Ananda pura-pura berkumur!',
+      desc: t.alHalq.f1Desc,
+      tip: t.alHalq.f1Tip,
       color: 'bg-soft-blue',
       textColor: 'text-deep-blue',
       shadow: 'shadow-[0_4px_0_0_#0d4170]',
       borderColor: 'border-deep-blue'
     },
     {
-      title: 'Lantai Tengah',
+      title: t.alHalq.f2Title,
       letters: 'ع ح',
-      desc: 'Suara Pedas Bersih',
-      tip: 'Pura-pura kepedasan: Hah... Hah...',
+      desc: t.alHalq.f2Desc,
+      tip: t.alHalq.f2Tip,
       color: 'bg-warm-sand',
       textColor: 'text-deep-gold',
       shadow: 'shadow-[0_4px_0_0_#673e00]',
       borderColor: 'border-deep-gold'
     },
     {
-      title: 'Lantai Bawah',
+      title: t.alHalq.f3Title,
       letters: 'ء هـ',
-      desc: 'Suara Lega',
-      tip: 'Seperti menghela nafas lega setelah minum.',
+      desc: t.alHalq.f3Desc,
+      tip: t.alHalq.f3Tip,
       color: 'bg-sage-green',
       textColor: 'text-green-700',
       shadow: 'shadow-[0_4px_0_0_#15803d]',
@@ -71,8 +74,8 @@ export default function AlHalqPage() {
             <rect x="55" y="45" width="10" height="15" rx="5" fill="#fef08a"/>
           </svg>
         </div>
-        <h1 className="text-3xl font-black text-deep-blue tracking-tight mt-6">Menara Leher (Al-Halq)</h1>
-        <p className="text-slate-500 font-medium">Mari jelajahi 3 lantai di menara leher!</p>
+        <h1 className="text-3xl font-black text-deep-blue tracking-tight mt-6"><AnimatedText text={t.alHalq.title} /></h1>
+        <p className="text-slate-500 font-medium"><AnimatedText text={t.alHalq.subtitle} /></p>
       </header>
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6 relative">
@@ -89,11 +92,11 @@ export default function AlHalqPage() {
           >
             <div className={`absolute top-0 left-0 w-full h-2 ${floor.color}`}></div>
             <div className="text-center space-y-2">
-              <h3 className={`text-sm font-black uppercase tracking-wider ${floor.textColor}`}>{floor.title}</h3>
+              <h3 className={`text-sm font-black uppercase tracking-wider ${floor.textColor}`}><AnimatedText text={floor.title} /></h3>
               <div className={`text-5xl font-black py-4 ${floor.textColor}`}>
                 {floor.letters}
               </div>
-              <p className="font-bold text-slate-700">{floor.desc}</p>
+              <p className="font-bold text-slate-700"><AnimatedText text={floor.desc} /></p>
             </div>
 
             {/* <button 
@@ -107,7 +110,7 @@ export default function AlHalqPage() {
             <div className={`mt-4 ${floor.color} bg-opacity-30 rounded-2xl p-4 border-l-4 ${floor.borderColor}`}>
               <div className="flex items-center gap-2 mb-1">
                 <Info size={14} className={floor.textColor} />
-                <p className={`text-[10px] font-black uppercase tracking-widest ${floor.textColor}`}>Bisikan Ortu</p>
+                <p className={`text-[10px] font-black uppercase tracking-widest ${floor.textColor}`}>{t.common.parentWhisper}</p>
               </div>
               <p className="text-sm text-slate-600 italic leading-relaxed">"{floor.tip}"</p>
             </div>

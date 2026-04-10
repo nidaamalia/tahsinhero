@@ -29,9 +29,9 @@ export default function AsySyafatainPage() {
     },
     {
       title: 'Gigi Kelinci',
-      action: 'Gigit',
+      action: 'Gigitan Lembut',
       letters: 'ف',
-      tip: 'Gigi atas gigit bibir bawah sedikit.',
+      tip: 'Gigi seri atas sedikit menggigit bibir bawah bagian dalam.',
       color: 'bg-sage-green',
       textColor: 'text-green-700',
       shadow: 'shadow-[0_4px_0_0_#15803d]'
@@ -39,7 +39,7 @@ export default function AsySyafatainPage() {
   ];
 
   return (
-    <motion.div 
+    <motion.div
       initial={{ x: 50, opacity: 0 }}
       animate={{ x: 0, opacity: 1 }}
       transition={{ type: 'spring', stiffness: 300, damping: 30 }}
@@ -73,7 +73,7 @@ export default function AsySyafatainPage() {
             <div className={`p-2 rounded-xl inline-block w-fit mb-4 ${card.color} ${card.textColor} font-black text-xs uppercase tracking-widest`}>
               {card.action}
             </div>
-            
+
             <div className="flex-grow space-y-4">
               <div className="text-5xl font-black text-slate-800 text-center py-6">
                 {card.letters}
@@ -82,7 +82,7 @@ export default function AsySyafatainPage() {
             </div>
 
             <div className="mt-6 space-y-4">
-              {/* <button 
+              {/* <button
                 onClick={() => handlePlayAudio(card.action)}
                 className={`w-full py-3 ${card.textColor.replace('text-', 'bg-').replace('700', '600')} text-white rounded-full font-bold flex items-center justify-center gap-2 ${card.shadow} active:translate-y-1 active:shadow-none transition-all`}
               >
@@ -91,7 +91,7 @@ export default function AsySyafatainPage() {
               </button> */}
 
               <div className="bg-slate-50 rounded-2xl p-4 border-l-4 border-slate-300">
-                <p className="text-[10px] font-black text-slate-500 uppercase tracking-widest mb-1">Bisikan Ortu</p>
+                <p className="text-[10px] font-black text-slate-500 uppercase tracking-widest mb-1">Tips Mengajari</p>
                 <p className="text-sm text-slate-600 italic">"{card.tip}"</p>
               </div>
             </div>

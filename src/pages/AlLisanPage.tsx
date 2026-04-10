@@ -21,37 +21,41 @@ export default function AlLisanPage() {
 
   const content = [
     {
-      letters: 'ق ك',
-      title: 'Ketukan Pintu',
-      tip: 'Ketuk langit-langit mulut belakang.',
+      groups: [
+        { letters: 'ق ك', title: 'Ketukan Pintu', tip: 'Bunda, ajak Ananda buka mulut agak lebar, lalu rasakan lidah paling belakang menahan suara (seperti tersedak kecil).' }
+      ],
       color: 'bg-soft-blue',
       textColor: 'text-deep-blue',
     },
     {
-      letters: 'ج ش ي',
-      title: 'Jembatan Naik',
-      tip: 'Tengah lidah menempel ke atas.',
+      groups: [
+        { letters: 'ج ش ي', title: 'Jembatan Naik', tip: 'Tempelkan atau angkat tengah lidahnya ke atas, seperti membuat jembatan melengkung di dalam mulut!' }
+      ],
       color: 'bg-warm-sand',
       textColor: 'text-deep-gold',
     },
     {
-      letters: 'ض',
-      title: 'Pelukan Lidah',
-      tip: 'Sisi lidah peluk gigi geraham.',
+      groups: [
+        { letters: 'ض', title: 'Pelukan Lidah', tip: 'Lidahnya memeluk gigi geraham atas ya! Pipinya bisa kelihatan agak menggembung pelan.' },
+        { letters: 'ل', title: 'Ujung Sisi Lidah', tip: 'Lidahnya menyangkut nempel kuat di gusi atas bagian depan (La.. La.. La..).' }
+      ],
       color: 'bg-sage-green',
       textColor: 'text-green-700',
     },
     {
-      letters: 'ل ن ر ت د ط ز س ص ث ذ ظ',
-      title: 'Tarian Pengetuk',
-      tip: 'Ujung lidah ketuk gusi atas.',
+      groups: [
+        { letters: 'ن ر', title: 'Ketukan Gusi', tip: 'Geli-geli ketuk gusi lho! Ujung lidah nempel di gusi persis di atas gigi depan.' },
+        { letters: 'ط د ت', title: 'Tancap Pangkal Gigi', tip: 'Tekan ujung lidahnya nyangkut pelan persis di perbatasan gigi depan dan gusi.' },
+        { letters: 'ص س ز', title: 'Siulan Celah Gigi', tip: 'Lidahnya istirahat di bawah, lalu tiup udaranya pelan keluar dari celah gigi seri, sshh...' },
+        { letters: 'ظ ذ ث', title: 'Gigitan Lembut', tip: 'Keluarkan ujung lidahnya sediiiikit saja, lalu jepit pelan dengan gigi ujung (seperti pura-pura cadel).' }
+      ],
       color: 'bg-orange-50',
       textColor: 'text-orange-700',
     }
   ];
 
   return (
-    <motion.div 
+    <motion.div
       initial={{ x: 50, opacity: 0 }}
       animate={{ x: 0, opacity: 1 }}
       transition={{ type: 'spring', stiffness: 300, damping: 30 }}
@@ -87,8 +91,8 @@ export default function AlLisanPage() {
             key={tab.id}
             onClick={() => setActiveTab(idx)}
             className={`px-4 py-2 rounded-full font-bold text-sm transition-all ${
-              activeTab === idx 
-                ? 'bg-deep-blue text-white shadow-[0_4px_0_0_#0d4170] translate-y-[-2px]' 
+              activeTab === idx
+                ? 'bg-deep-blue text-white shadow-[0_4px_0_0_#0d4170] translate-y-[-2px]'
                 : 'bg-white text-slate-500 border-2 border-slate-100 hover:bg-slate-50'
             }`}
           >
@@ -106,33 +110,29 @@ export default function AlLisanPage() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.2 }}
-            className={`bg-white rounded-3xl p-8 border-b-4 border-slate-100 shadow-sm flex flex-col items-center text-center gap-6`}
+            className="flex flex-col gap-6"
           >
-            <div className={`w-full py-8 rounded-2xl ${content[activeTab].color} ${content[activeTab].textColor}`}>
-              <h2 className="text-4xl md:text-5xl font-black leading-relaxed px-4">
-                {content[activeTab].letters}
-              </h2>
-            </div>
-            
-            <div className="space-y-2">
-              <h3 className="text-2xl font-bold text-slate-800">{content[activeTab].title}</h3>
-            </div>
+            {content[activeTab].groups.map((group, i) => (
+              <div key={i} className="bg-white rounded-3xl p-6 border-b-4 border-slate-100 shadow-sm flex flex-col items-center text-center gap-5">
+                <div className={`w-full py-6 rounded-2xl ${content[activeTab].color} ${content[activeTab].textColor}`}>
+                  <h2 className="text-4xl font-black leading-relaxed px-4">
+                    {group.letters}
+                  </h2>
+                </div>
 
-            {/* <button 
-              onClick={() => handlePlayAudio(content[activeTab].letters)}
-              className="w-full md:w-auto px-8 py-4 bg-deep-blue text-white rounded-full font-bold flex items-center justify-center gap-2 shadow-[0_4px_0_0_#0d4170] active:translate-y-1 active:shadow-none transition-all"
-            >
-              <Play size={20} fill="currentColor" />
-              Dengarkan Suara
-            </button> */}
+                <div className="space-y-1">
+                  <h3 className="text-xl font-bold text-slate-800">{group.title}</h3>
+                </div>
 
-            <div className="w-full bg-slate-50 rounded-2xl p-5 border-l-4 border-deep-blue text-left flex gap-4 items-start">
-              <MessageCircle className="text-deep-blue shrink-0 mt-1" size={24} />
-              <div>
-                <p className="text-xs font-black text-deep-blue uppercase tracking-widest mb-1">Bisikan Ortu</p>
-                <p className="text-slate-600 italic leading-relaxed">"{content[activeTab].tip}"</p>
+                <div className="w-full bg-slate-50 rounded-2xl p-4 border-l-4 border-deep-blue text-left flex gap-3 items-start">
+                  <MessageCircle className="text-deep-blue shrink-0 mt-1" size={20} />
+                  <div>
+                    <p className="text-[10px] font-black text-deep-blue uppercase tracking-widest mb-1">Tips Mengajari</p>
+                    <p className="text-sm text-slate-600 italic leading-relaxed">"{group.tip}"</p>
+                  </div>
+                </div>
               </div>
-            </div>
+            ))}
           </motion.div>
         </AnimatePresence>
       </div>

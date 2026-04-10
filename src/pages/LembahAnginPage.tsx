@@ -2,12 +2,16 @@ import { motion } from 'motion/react';
 import { Play, Pencil } from 'lucide-react';
 import MateriHeader from '../components/MateriHeader';
 import MaterialNav from '../components/MaterialNav';
+import { useLanguage } from '../contexts/LanguageContext';
+import { AnimatedText } from '../components/AnimatedText';
 
 export default function LembahAnginPage() {
+  const { t } = useLanguage();
+
   const letters = [
-    { char: 'ا', name: 'Huruf Alif', tip: 'BUKA MULUT LEBAR', parentTip: 'Ayo Kak, buka mulutnya seperti sedang kaget lihat balon besar!' },
-    { char: 'و', name: 'Huruf Wau', tip: 'MONYONG BULAT', parentTip: 'Bentuk bibirnya jadi bulat kecil ya, kayak mau tiup lilin.' },
-    { char: 'ي', name: 'Huruf Ya', tip: 'SENYUM LEBAR', parentTip: 'Tarik sudut bibirnya ke samping, seperti lagi senyum paling cantik!' },
+    { char: 'ا', name: t.alJauf.l1Name, tip: t.alJauf.l1Tip, parentTip: t.alJauf.l1Parent },
+    { char: 'و', name: t.alJauf.l2Name, tip: t.alJauf.l2Tip, parentTip: t.alJauf.l2Parent },
+    { char: 'ي', name: t.alJauf.l3Name, tip: t.alJauf.l3Tip, parentTip: t.alJauf.l3Parent },
   ];
 
   return (
@@ -40,7 +44,7 @@ export default function LembahAnginPage() {
             <h2 className="text-xl font-black text-white tracking-widest">AL-JAUF</h2>
           </div>
         </div>
-        <p className="text-slate-500 font-bold uppercase tracking-widest text-sm mt-8">Tempat udara mengalir bebas</p>
+        <p className="text-slate-500 font-bold uppercase tracking-widest text-sm mt-8"><AnimatedText text={t.alJauf.subtitle} /></p>
       </header>
 
       <div className="space-y-6">
@@ -56,8 +60,8 @@ export default function LembahAnginPage() {
               <div className="flex items-center gap-4">
                 <span className="text-5xl font-black text-deep-blue">{item.char}</span>
                 <div>
-                  <h3 className="text-lg font-bold text-slate-800">{item.name}</h3>
-                  <p className="text-deep-gold font-black text-xs tracking-wider">{item.tip}</p>
+                  <h3 className="text-lg font-bold text-slate-800"><AnimatedText text={item.name} /></h3>
+                  <p className="text-deep-gold font-black text-xs tracking-wider"><AnimatedText text={item.tip} /></p>
                 </div>
               </div>
               {/* <button className="w-12 h-12 bg-deep-blue text-white rounded-full flex items-center justify-center shadow-lg active:scale-90 transition-transform">
@@ -66,7 +70,7 @@ export default function LembahAnginPage() {
             </div>
 
             <div className="bg-soft-blue/30 rounded-2xl p-4 border-l-4 border-deep-blue">
-              <p className="text-[10px] font-black text-deep-blue uppercase tracking-widest mb-1">Bisikan Ortu</p>
+              <p className="text-[10px] font-black text-deep-blue uppercase tracking-widest mb-1">{t.common.parentWhisper}</p>
               <p className="text-sm text-slate-600 italic leading-relaxed">"{item.parentTip}"</p>
             </div>
           </motion.div>
@@ -78,9 +82,9 @@ export default function LembahAnginPage() {
           <Pencil size={20} />
         </div>
         <div className="space-y-1">
-          <h4 className="font-bold text-deep-blue">Catatan Ahli</h4>
+          <h4 className="font-bold text-deep-blue">{t.common.expertNote}</h4>
           <p className="text-sm text-slate-600 leading-relaxed">
-            Bunda, pastikan suara Mad ini murni keluar dari mulut ya. Kalau hidung dipencet dan suaranya berubah, berarti masih ada suara yang nyasar ke hidung!
+            {t.alJauf.expert}
           </p>
         </div>
       </div>
