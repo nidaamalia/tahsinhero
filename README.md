@@ -1,20 +1,49 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+![TahsinHero — A playful learning journey through Arabic sounds](docs/banner.svg)
 
-# Run and deploy your AI Studio app
+# TahsinHero
 
-This contains everything you need to run your app locally.
+An interactive tahsin-learning frontend organised around articulation points and letter characteristics. Built with React, TypeScript, React Router, Motion, Tailwind CSS, and Vite.
 
-View your app in AI Studio: https://ai.studio/apps/fbb15843-6b39-4a6f-94bc-0bc336a558bd
+## What to explore
 
-## Run Locally
+- A map-style entry point linking learning missions.
+- Lessons on makhraj, including throat, tongue, lips, and nasal resonance.
+- Letter-characteristic lessons and a pocket-reference page.
+- Shared navigation, animated learning components, and a language context.
 
-**Prerequisites:**  Node.js
+## Run locally
 
+Use Node.js 22 LTS and npm. The current lessons are bundled in the app; no AI API key is required to browse them.
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+```bash
+git clone https://github.com/nidaamalia/tahsinhero.git
+cd tahsinhero
+npm ci
+npm run dev
+```
+
+Open http://localhost:3000.
+
+```bash
+npm run lint
+npm run build
+npm run preview
+```
+
+`lint` currently runs TypeScript checking rather than an ESLint ruleset.
+
+## Code tour
+
+- [App.tsx](src/App.tsx): lesson routes and shared providers.
+- [MapPage.tsx](src/pages/MapPage.tsx): mission selection.
+- [LanguageContext.tsx](src/contexts/LanguageContext.tsx): language state.
+- [translations.ts](src/locales/translations.ts): translated interface content.
+- [components](src/components): common learning navigation and presentation.
+
+## Scope
+
+This is a learning-interface prototype, not an automated recitation assessor. It does not claim to detect pronunciation errors or certify mastery. Lessons should be reviewed by a qualified teacher before classroom use. Learner accounts, persistent progress, and speech scoring are outside the current implementation.
+
+## Next engineering milestones
+
+Keyboard and screen-reader walkthroughs, progress persistence, and tests for lesson navigation would strengthen the learning experience without implying unimplemented AI capabilities.
